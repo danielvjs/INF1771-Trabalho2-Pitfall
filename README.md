@@ -222,21 +222,6 @@ Com 0,05 o mapa médio não é resolvido; de 0,1 a 0,3 a diferença é pequena. 
 O agente **nunca** consulta `tile/3` nem `adjacentes/1`. O mapa real só é lido pelo motor, para gerar
 as percepções e aplicar dano. O `rodar_testes.py` também lê, só para anotar a causa da morte no relatório.
 
-## Como rodar
-
-Pré-requisitos (testado com SWI-Prolog 9.2.9, pyswip 0.3.3 e Python 3.12+):
-
-1. Instalar o [SWI-Prolog](https://www.swi-prolog.org/download/stable) (64 bits).
-2. Como na Aula 09: colocar `C:\Program Files\swipl\bin` no `PATH` e criar a variável `SWI_HOME_DIR=C:\Program Files\swipl`.
-
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-pip install -r requirements.txt
-
-python gmap.py                    # mapa.pl (igual ao médio)
-python gmap.py mapa_facil.pl      # ou mapa_medio.pl, mapa_dificil.pl
-```
 
 Teclas: **A** liga/desliga o automático; no manual, setas viram e andam e espaço pega. **M** mostra o
 mapa real, só para conferência (o agente continua sem vê-lo).
